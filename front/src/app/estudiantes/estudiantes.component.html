@@ -1,0 +1,53 @@
+<div class="card bg-light mb-3 my-5 shadow-sm">
+  <div class="card-header text-white background-color">Estudiantes</div>
+  <div class="card-body">
+    <h5 class="card-title text-center">Lista de Estudiantes</h5>
+    <div class="my-3 text-right">
+      <button class="btn btn-success" type="button" [routerLink]="['/estudiantes/form']">
+        <i class="fas fa-user-plus"></i> Crear Estudiante
+      </button>
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Buscar estudiante" [(ngModel)]="searchText">
+    </div>
+    <table class="table table-hover table-bordered table-striped text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Documento</th>
+          <th>Programa</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let estudiante of estudiantesFiltrados" class="align-middle text-center">
+          <td>{{ estudiante.id }}</td>
+          <td>{{ estudiante.nombreEstudiante }}</td>
+          <td>{{ estudiante.edad }}</td>
+          <td>{{ estudiante.documento }}</td>
+          <td>{{ estudiante.programaId.nomPrograma }}</td>
+          <td>
+            <span [ngClass]="{
+              'text-success fw-bold': estudiante.status === 'A',
+              'text-danger fw-bold': estudiante.status === 'I',
+              'estado-egresado': estudiante.status === 'E'
+            }">
+              {{ getEstadoNombre(estudiante.status) }}
+            </span>
+          </td>
+          <td>
+            <button class="btn btn-primary btn-sm mx-1" [routerLink]="['/estudiantes/form', estudiante.id]">
+              <i class="fas fa-edit"></i> Editar
+            </button>
+            <button class="btn btn-danger btn-sm mx-1" (click)="delete(estudiante)">
+              <i class="fas fa-trash-alt"></i> Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

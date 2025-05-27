@@ -1,0 +1,28 @@
+/* form.component.css */
+select.form-control {
+    color: rgb(9, 9, 9); /* Cambia el color del texto dentro del select */
+}
+
+select.form-control option {
+    color: rgb(13, 13, 13); /* Asegura que las opciones dentro del desplegable también sean negras */
+}
+
+.card-body {
+    background-color: #fffefe; /* Light gray background for the card */
+    border-radius: 10px; /* Rounded corners */
+    color: black;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Add padding inside the card */
+}
+.card-header {
+    background-color: cornflowerblue; /* Blue background for the header */
+    color: white; /* White text for the header */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align the text */
+}
+.estado-egresado {
+  color: #0d6efd; /* azul Bootstrap */
+  font-weight: 500; /* menos negrita que bold */
+}
+
+

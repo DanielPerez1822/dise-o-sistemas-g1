@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url('assets/CORHUILAPGN.png'); /* asegúrate de que esté en /assets */
+   background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 300px; /* o puedes usar por ejemplo '300px auto' si quieres forzar tamaño */
+    background-attachment: fixed; /* mantiene la imagen fija en el centro al hacer scroll */
+  margin: 0;
+  height: 100vh;
+}
+

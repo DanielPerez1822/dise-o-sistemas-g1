@@ -1,0 +1,23 @@
+<div class="card mx-auto my-5" style="max-width:400px;">
+  <div class="card-header bg-primary text-white text-center">Iniciar Sesión</div>
+  <div class="card-body">
+    <form (ngSubmit)="login()">
+      <div class="mb-3">
+        <input type="text" class="form-control" [(ngModel)]="username" name="username" placeholder="Usuario" required>
+      </div>
+      <div class="mb-3">
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Contraseña" required>
+      </div>
+      <button class="btn btn-success w-100" type="submit">
+        Entrar
+      </button>
+      <div *ngIf="error" class="alert alert-danger mt-2">{{error}}</div>
+      <div *ngIf="success" class="alert alert-success mt-2">{{success}}</div>
+    </form>
+    <div class="text-center mt-2">
+      <button class="btn btn-outline-primary w-100" type="button" (click)="goToRegister()">
+        ¿No tienes cuenta? Regístrate
+      </button>
+    </div>
+  </div>
+</div>

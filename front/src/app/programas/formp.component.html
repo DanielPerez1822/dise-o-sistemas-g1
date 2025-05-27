@@ -1,0 +1,32 @@
+<div class="card bg-dark text-white shadow-lg mx-auto my-5" style="max-width: 400px; border-radius: 15px;">
+  <div class="card-header text-center font-weight-bold bg-primary" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+    <h4>{{ titulo }}</h4>
+  </div>
+  <div class="card-body bg-light text-dark rounded" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control my-3" [(ngModel)]="programa.nomPrograma" name="nomPrograma" placeholder="Nombre del Programa" />
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control my-3" [(ngModel)]="programa.facultad" name="facultad" placeholder="Facultad" />
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control my-3" [(ngModel)]="programa.numCredito" name="numCredito" placeholder="Número de Créditos" />
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control my-3" [(ngModel)]="programa.numSemestre" name="numSemestre" placeholder="Número de Semestres" />
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control my-3" [(ngModel)]="programa.descripcion" name="descripcion" placeholder="Descripción" />
+      </div>
+      <div class="form-group text-center">
+        <button class="btn btn-success btn-block my-2" role="button" *ngIf="!programa.id" (click)="create()">
+          Crear
+        </button>
+        <button class="btn btn-primary btn-block my-2" *ngIf="programa.id" (click)="update()">
+          Actualizar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

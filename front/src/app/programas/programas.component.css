@@ -1,0 +1,6 @@
+.card-header {
+    background-color: cornflowerblue; /* Blue background for the header */
+    color: white; /* White text for the header */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align the text */
+}
